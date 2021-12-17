@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  transition: all 0.2s;
+}
+
+:root {
+  --warna1: black;
+  --warna2: white;
+  --warna3: rgb(69, 69, 194);
+  --warna4: rgb(33, 33, 97);
+}
+
+nav {
+  height: 100vh;
+  background-color: var(--warna1);
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  margin: 0 10% 0 0;
+  z-index: 999;
+}
+
+nav .logo h2 {
+  color: var(--warna2);
+  cursor: pointer;
+}
+.logo {
+  /* border: 1px solid red; */
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  height: 20%;
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btn i {
+  color: var(--warna2);
+  /* border: 1px solid red; */
+  font-size: 2rem;
+  cursor: pointer;
+}
+.btn i:hover {
+  color: var(--warna3);
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 30%;
+  width: 100%;
+}
+.navbar a {
+  color: var(--warna2);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+.navbar a:hover {
+  background-color: var(--warna3);
+}
+
+#home {
+  width: 75%;
+  height: 100vh;
+  /* position: relative; */
+  background: url(/asset/foto/modern-sport-composition-with-gym-elements.jpg) no-repeat;
+  background-position: right;
+  margin-left: 21rem;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home h2,
+p {
+  color: var(--warna2);
+  font-size: 20pt;
+}
+.home-btn {
+  width: 7rem;
+  height: 3rem;
+  background-color: var(--warna3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--warna2);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+#home .home-btn:hover {
+  background-color: var(--warna4);
+}
+#home,
+#category,
+#contact,
+#about {
+  margin-left: 21rem;
+  width: 75%;
+  height: 100vh;
+}
+#category {
+  background-color: var(--warna3);
+  height: fit-content;
+}
+#category .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+#category .box-container .box {
+  padding: 5rem;
+  text-align: center;
+  border: var(--border);
+}
+
+#category .box-container .box img {
+  height: 10rem;
+}
+
+#category .box-container .box h3 {
+  color: var(--warna1);
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+#category .box-container .box .price {
+  color: var(--warna1);
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+
+#category .box-container .box .price span {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+#category .box-container .box:hover {
+  background: var(--warna1);
+}
+
+#category .box-container .box:hover > * {
+  color: var(--warna2);
+}
+#category .box-container .box .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-size: 1.7rem;
+  color: var(--warna1);
+  background: var(--warna2);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#category .box-container .box .btn:hover {
+  letter-spacing: 0.2rem;
+}
+
+#contact {
+  display: flex;
+  background: var(--black);
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--warna3);
+}
+
+#contact form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#contact form h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+#contact form .inputBox {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--warna3);
+  border: 1px solid white;
+}
+
+#contact form .inputBox span {
+  color: var(--warna2);
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+#contact form .inputBox input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: var(--warna2);
+  text-transform: none;
+  background: none;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--warna3);
+  padding-top: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#about h2,
+p {
+  margin: 1rem 2rem;
+}
+
+nav .navbar a.active {
+  background-color: var(--warna3);
+}
